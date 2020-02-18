@@ -1,0 +1,12 @@
+angular.module('appRoutes',['ngRoute'])
+.config(function($routeProvider,$locationProvider){
+    $locationProvider.html5Mode(true);
+    $routeProvider
+    .when('/',{
+        templeteUrl:'app/views/pages/home.html'
+    })
+    .when('/about',{
+        templeteUrl:'app/views/pages/about.html'
+    })
+    .otherwise({redirectTo:'/'})
+});
